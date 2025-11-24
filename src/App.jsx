@@ -59,8 +59,11 @@ const updateTodo = (val) => {
   return (
     <div>
       <input type="text"placeholder='Enter todos' value={value}    onChange={(e)=> setValue(e.target.value)} />
+
+
       <button onClick={addToDo}>Add ToDo</button>
 
+      <button onClick={()=>setTodos([])}>Delete All</button>
 
       <br/>
       <ul>
