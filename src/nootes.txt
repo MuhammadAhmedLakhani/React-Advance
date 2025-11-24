@@ -9,3 +9,13 @@ visible/use in the program as component donot rerendered again
 *)you can update the value in react through document method like getElementById but
 it is like jugar in react
 
+--Hooks (useState)
+
+*there is a standard in naming hooks like always atrat with 'use
+*useState return and array containing two elelment 
+*first is the argumetn we passed to it and second is the function 
+*)we destructurer the array return by useState with counter and setCounter
+*)setCounter is the function name and counter is value
+*)we use the counter and increment it whenever button is pressed
+*)onClick event calls the setCounter function and provide it with the updated vlue
+*)this updated value become the value of the counter
