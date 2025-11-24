@@ -50,4 +50,33 @@ thensimply we update the setValue state to empty string by setValue('')
 *)i searched the net about how deleteToDo is getting i value it is getting the i variable inside map thanks to closure concepts in javascript
 
 
+------useState
+
+*USE state gets a call back function
+*it is similar to coponentdidmount 
+*it runs in the end after all ui is rendered
+*it only runs once (one time) if we pass emty array with parameters
+
+case1 
+  
+  useEffect(()=>{
+    console.log("test")
+  },[])
+  
+//case2
+
+*if use without arrays then runs whenever state changes of everything
+
+useEffect(()=>{
+  console.log("runs with every state change")
+})
+
+*Case3
+*here we specify the variable onwhich useEffect renderes if only these variables states changes
+//in our examlple even though the name is change through update 
+but it is not rerendering
+
+useEffect(()=>{
+  console.log("slected runs")
+},[counter])
 
