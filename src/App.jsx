@@ -15,7 +15,12 @@ const addToDo = () => {
   setValue("")
 
 }
-
+const deleteToDo = (index) => {
+  console.log(index)
+  let oldtodos = [...todos]
+  oldtodos.splice(index,1)
+  setTodos(oldtodos)
+}
 
 
 console.log(todos,"todos")
@@ -24,7 +29,9 @@ console.log(todos,"todos")
       <input type="text"placeholder='Enter todos' value={value}    onChange={(e)=> setValue(e.target.value)} />
       <button onClick={addToDo}>Add ToDo</button>
       <ul>
-          {todos.map((v,i)=><li key={i}>{v.value}</li>
+          {todos.map((v,i)=><li key={i}>{v.value}
+            <button onClick={()=>deleteToDo(i)}>Delete</button>
+          </li>
           )}
       </ul>
     </div>

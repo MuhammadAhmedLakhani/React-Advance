@@ -26,6 +26,8 @@ it is like jugar in react
 
 *it is important to make new reference of the data when you add new value in array as react will not get that a value is updated as it still shares the old reference
 
+*)here important is {value is using object enhacement as when key is not given js automatically create the key with name same as valueVariable name}
+
 
 --data binding
 
@@ -39,3 +41,13 @@ input as well
 thensimply we update the setValue state to empty string by setValue('')
 
 *)this is two way data binding from value to state and from state to value
+
+
+--delete
+
+*)here the splice method is used to delete the clicked todowith help of  i variabl
+*)first we get the copy of todo with new reference
+*)i searched the net about how deleteToDo is getting i value it is getting the i variable inside map thanks to closure concepts in javascript
+
+
+
