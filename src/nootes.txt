@@ -19,3 +19,10 @@ it is like jugar in react
 *)we use the counter and increment it whenever button is pressed
 *)onClick event calls the setCounter function and provide it with the updated vlue
 *)this updated value become the value of the counter
+
+
+--todo
+
+
+*it is important to make new reference of the data when you add new value in array as react will not get that a value is updated as it still shares the old reference
+

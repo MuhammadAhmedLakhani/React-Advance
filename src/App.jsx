@@ -4,21 +4,29 @@ import { useState } from 'react';
 
 function App() {
 
-  // let name = "Ahad";
+  
+let [todos, setTodos] = useState([{value:"Ahad"},{value:"Ahmed"}])
 
-  // const updateName = ()=>{
-  //   name = "Ahmed"
-  //   console.log(name)
-  // }
+let [value,setValue] = useState("")
 
-  let [counter,setCounter] = useState(0);
+const addToDo = () => {
+  setTodos([...todos , {value}]) //here javascript automatically make key name 'value' (object enhancement) 
 
-  console.log(counter)
+  setValue("")
 
+}
+
+
+
+console.log(todos,"todos")
   return (
     <div>
-      <h2>{counter}</h2>
-      <button onClick={()=> setCounter(counter +1)}>counter</button>
+      <input type="text"placeholder='Enter todos' value={value}    onChange={(e)=> setValue(e.target.value)} />
+      <button onClick={addToDo}>Add ToDo</button>
+      <ul>
+          {todos.map((v,i)=><li key={i}>{v.value}</li>
+          )}
+      </ul>
     </div>
   );
 }
