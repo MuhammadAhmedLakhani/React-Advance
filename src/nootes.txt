@@ -1,0 +1,11 @@
+*In react variables are use for static rendering of data
+*Isssue is that as coponent rendered firsttime the currentvalue of variable 
+is used in prograam
+*you can update the value of the component only through functions but
+ it is not use in program
+*when the variable value updated thanks to user interactivity the new value is not
+visible/use in the program as component donot rerendered again 
+*for these reasons state is introduced in react
+*)you can update the value in react through document method like getElementById but
+it is like jugar in react
+
