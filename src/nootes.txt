@@ -80,3 +80,17 @@ useEffect(()=>{
   console.log("slected runs")
 },[counter])
 
+
+---component unmounted(death)
+
+*as we know that useEffect is so powerful that it repalced the multiple rendering function found in class based react earlier
+*one of those function was unmounted() which would runs only when the component was unmounted(dead)
+
+*there are 3 stages of state 
+1mounteed
+2update 
+3unmounted
+
+return of useEffext helps us to find unmounted component
+
+

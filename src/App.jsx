@@ -4,7 +4,7 @@ import './App.css';
 
 // function App() {
 
-  
+
 // let [todos, setTodos] = useState([
 //   {
 //     value:"Ahad",
@@ -70,10 +70,10 @@ import './App.css';
 //           {todos.map((v,i)=><li key={i}>
 
 //             <input  disabled = {v.disabled}  type="text" defaultValue={v.value} onChange={(e)=> v.value = e.target.value}  />
-            
+
 
 //             {v.disabled?            //TRENERY OPERATOR
-              
+
 //               <button onClick={()=> editToDo(v)}>Edit</button>
 //               :
 //               <button onClick={()=>updateTodo(v)}>Update </button>
@@ -91,40 +91,49 @@ import './App.css';
 
 import { useState } from 'react';
 import { useEffect } from 'react';
+import Counter from './components/counter';
 
 
 
 
 
-function App(){
-  const [counter , setCounter] = useState(0)
-  const [name , setName] = useState("Ahemd")
-  
-//runs once only
+
+
+function App() {
+  const [counter, setCounter] = useState(0)
+  const [name, setName] = useState("Ahemd")
+
+
+  //runs once only
 
   // useEffect(()=>{
   //   console.log("test")
   // },[])
-  
-// useEffect(()=>{
-//   console.log("runs with every state change")
-// })
+
+  // useEffect(()=>{
+  //   console.log("runs with every state change")
+  // })
 
 
-useEffect(()=>{
-  console.log("slected runs")
-},[counter])
+  useEffect(() => {
+    console.log("selected runs")
+  }, [counter])
 
   return (
     <div>
 
+      {/* ternary operator if first condition true then moves forward and show counter component */}
+
+      { counter < 10 &&  <Counter count = {counter}  />}
+
+
+      <button onClick={() => setCounter(counter + 1)}>+</button>
+      <button onClick={() => setCounter(counter - 1)}>-</button>
+
       <h1>{name}</h1>
-      <button onClick={()=>setName("Ahad")}>update</button>
+      <button onClick={() => setName("Ahad")}>update</button>
 
 
-    <h1>{counter}</h1>
-    <button onClick={()=> setCounter(counter + 1)}>+</button>
-    <button onClick={()=> setCounter(counter - 1)}>-</button>
 
     </div>
   )
