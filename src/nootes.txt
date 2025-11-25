@@ -94,3 +94,8 @@ useEffect(()=>{
 return of useEffext helps us to find unmounted component
 
 
+---useLayoutEffect
+
+*it is called before even ui(user interface) rendered 
+*unlike useEffect it is rendered before even ui is displayed
+*it also runs on selected hooks which we can define in empty array  just like useEffect but not mainly in use

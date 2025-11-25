@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import { useEffect, useLayoutEffect } from "react"
 
 
 function Counter({ count }) {
@@ -12,6 +12,10 @@ function Counter({ count }) {
         return ()=>{
             console.log("component unmounted")
         }
+    },[])
+
+    useLayoutEffect(()=>{
+        console.log("before ui")
     },[])
 
 
